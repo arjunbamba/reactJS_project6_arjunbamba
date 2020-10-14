@@ -35,7 +35,7 @@ export default function DisplayMembers({follow, unfollow, show, hide, isProfileM
         {results.map((result) => {
             let avatar = result.avatar_url;
             let name = result.login;
-            let url = result.url;
+            // let url = result.url;
             
             return (
             <div key={(Math.random())} style={{textAlign: "center"}}>

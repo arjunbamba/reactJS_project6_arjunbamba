@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 
-import { fetchFollowing, fetchFollow, destroyFollow, saveFollow } from "./api";
+import { fetchFollowing } from "./api";
 
 export default function FollowForm({name, onSubmit}) 
 {
     const [title, setTitle] = useState(name);
-    const [isPresent, setIsPresent] = useState(false);
+    // const [isPresent, setIsPresent] = useState(false);
     var idToDelete = -1;
     
     function handleSubmit(event) {
@@ -14,15 +14,16 @@ export default function FollowForm({name, onSubmit})
         var found = 0;
         fetchFollowing()
         .then((response) => {
-            found = response.find((item) => item.title==title);
+            setTitle(name);
+            found = response.find((item) => item.title===title);
             if (found) {
-                setIsPresent(true);
+                // setIsPresent(true);
                 idToDelete = found.id;
+                onSubmit(idToDelete);
             }
             else {
-                setIsPresent(false);
+                // setIsPresent(false);
             }
-            onSubmit(idToDelete);
         })  
     }
     

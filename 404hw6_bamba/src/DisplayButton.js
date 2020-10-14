@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import FollowForm from "./FollowForm";
 import UnfollowForm from "./UnfollowForm";
 
-import { fetchFollowing, fetchFollow, destroyFollow, saveFollow } from "./api";
+import { fetchFollowing } from "./api";
 
 export default function DisplayButton ({nameToCheck, handleSubmit, handleDelete}) {
 
@@ -13,7 +13,7 @@ export default function DisplayButton ({nameToCheck, handleSubmit, handleDelete}
         var found = 0;
         fetchFollowing()
         .then((response) => {
-            found = response.find((item) => item.title==name);
+            found = response.find((item) => item.title===name);
             // console.log(found);
             if (found) {
                 setIsPresent(true);

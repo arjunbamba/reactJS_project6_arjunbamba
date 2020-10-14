@@ -8,6 +8,7 @@ export default function FollowForm({
 
   function handleSubmit(event) {
     event.preventDefault();
+    setTitle(name);
     onSubmit(title);
   }
 

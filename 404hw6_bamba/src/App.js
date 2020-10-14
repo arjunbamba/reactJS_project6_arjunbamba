@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-import { BrowserRouter as Router, Switch, Route, Link, NavLink, Redirect /*,useHistory, Redirect */ } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route /*, Link, NavLink, Redirect, useHistory, Redirect */ } from "react-router-dom";
 
 import DisplayMembers from "./DisplayMembers.js";
 import DisplayProfile from "./DisplayProfile.js";

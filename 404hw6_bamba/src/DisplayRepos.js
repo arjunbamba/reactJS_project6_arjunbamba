@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom";
 import { createPortal } from "react-dom";
 import { fetch_profile } from "./fetch_profile";
 
-const modalContainer = document.getElementById("modal-container");
+// const modalContainer = document.getElementById("modal-container");
 
 
 export default function DisplayRepos({ onClose }) {
@@ -65,9 +65,11 @@ export default function DisplayRepos({ onClose }) {
                 {results.map((result) => {
                     return (
                         <>
-                        <p>Repository is: <a href={result.html_url} target="_blank">{result.name}</a></p>
-                        <p>Description is: {result.description}</p>
-                        <hr></hr>
+                        <div style={{textAlign: "center"}}>
+                          <p>Repository is: <a href={result.html_url} target="_blank" rel="noopener noreferrer">{result.name}</a></p>
+                          <p>Description is: {result.description}</p>
+                          <hr></hr>
+                        </div>
                         </>
                     );
                 })}

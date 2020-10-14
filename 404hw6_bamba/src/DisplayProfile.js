@@ -5,8 +5,7 @@ import {useParams} from "react-router-dom";
 import { createPortal } from "react-dom";
 import { fetch_profile } from "./fetch_profile";
 
-const modalContainer = document.getElementById("modal-container");
-
+// const modalContainer = document.getElementById("modal-container");
 
 export default function DisplayProfile({ onClose }) {
 
