@@ -6,8 +6,8 @@ USC USERNAME: arjunbam
 
 USC EMAIL: arjunbam@usc.edu
 
-HW URL: 
+HW URL: https://vibrant-edison-b1fb86.netlify.app
 
-[View site]()
+[View site](https://vibrant-edison-b1fb86.netlify.app)
 
 
